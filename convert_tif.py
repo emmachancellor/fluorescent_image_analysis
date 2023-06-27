@@ -3,7 +3,14 @@ import numpy as np
 import PIL
 from PIL import Image
 import os
+'''
+This code is designed to convert .TIF files to .png files as well as
+reduce the file size of the images to 512x512 pixels.
 
+The user will need to specify the path to the folder containing the .TIF files (files), 
+the parent folder of the folder containing the .TIF files (folder_path),
+as well as the path to a new folder where the .png files will be saved (new_folder_path).
+'''
 
 new_folder_path = '/home/ecdyer/labshare/LL07132018/New_tumor_T_coculture_data/SIY_hi_t_spot2/png_512_bright/'
 folder_path = '/home/ecdyer/labshare/LL07132018/New_tumor_T_coculture_data/SIY_hi_t_spot2/high_t_spot2_bright/'
@@ -42,13 +49,5 @@ for i, f in enumerate(files):
         file_names.append(file_name)
         scale_factors.append(scale_factor)
 
-# Save .csv of the scale factors
-sf_df = pd.DataFrame({"file_name": file_names, "scale_factors":scale_factors})
-report_name = folder_path.rsplit('/', 1)[-1:]
-print(report_name)
-directory_path = folder_path.rsplit('/', 2)[:-2]
-print(directory_path)
-full_path = directory_path[0]+report_name[0]+'.csv'
-sf_df.to_csv(full_path, index=False)     
 
 
