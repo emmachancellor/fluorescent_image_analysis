@@ -8,5 +8,10 @@ or written with the intent of it becoming a package—it's not that pretty. <br>
 1. Acquire Images and Process for Analysis
 2. Train a Cellpose Model and Extract ROI Masks
 3. Process ROI Masks for ImageJ Compatability
-4. Extract Intensity from Each Channel
-5. Apply Softmax and Generate ROI-level Channel Assignment Probabilities
+     * [ecd_roi_converter.py](https://github.com/emmachancellor/fluorescent_image_analysis/blob/main/ecd_roi_converter.py)
+         * This file performs two processing steps. First, the .txt ROIs saved from 512x512 .png images
+           in Cellpose will be scaled to the original .TIF file size so that they can be overlayed on the
+           original images. Second, the newly scaled .txt ROIs will be saved as a .zip file that can be
+           opened natively in ImageJ. 
+5. Extract Intensity from Each Channel
+6. Apply Softmax and Generate ROI-level Channel Assignment Probabilities
