@@ -67,5 +67,9 @@ for file in tqdm(all_files, desc='Converting ROI files'):
 
 # Save the ROI points as an ROI archive file
             rois = [ImagejRoi.frompoints(rois) for rois in all_rois]
-            file = folder_path + '/' + file[:-4] + '_rois.zip'
-            roiwrite(file, rois)
+            roi_folder = folder_path + '/imagej_rois/'
+            if not os.path.exists(roi_folder):
+                os.makedirs(roi_folder)
+            file = folder_path + '/imagej_rois/' + file[:-4] + '_rois.zip'
+            if 'scaled' in file:
+                roiwrite(file, rois)
