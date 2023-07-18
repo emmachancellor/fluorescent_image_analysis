@@ -15,6 +15,7 @@ or written with the intent of it becoming a package—it's not that pretty. <br>
 7. **Apply Softmax and Generate ROI-level Channel Assignment Probabilities**
 ---
 ### Training and Fine-Tuning a Cellpose Model <a name="cellpose"></a>
+All Cellpose documentation can be found in the original repository: https://github.com/mouseland/cellpose <br>
 #### Downloading and Running Cellpose on Your Computer
 Start by creating a new condo environment and downloading cellpose <br>
 `conda create —n cellpose python=3.8`<br>
