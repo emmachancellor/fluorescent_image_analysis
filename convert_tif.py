@@ -44,10 +44,6 @@ for i, f in enumerate(files):
         new_name = new_folder_path + file_name
         print(new_name)
         im.save(new_name + '.png', 'PNG')
-        
-        # Save scale factor
-        file_names.append(file_name)
-        scale_factors.append(scale_factor)
 
 
 
