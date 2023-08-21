@@ -14,10 +14,10 @@ or written with the intent of it becoming a package—it's not that pretty. <br>
 6. **Extract Intensity from Each Channel**
      * **[calculate_image_intensity.ijm](https://github.com/emmachancellor/fluorescent_image_analysis/tree/main)**: This is an ImageJ Macro file, which can be run directly from ImageJ. This script will prompt the user to select the location of the .zip masks, as well as where the intensity data should be saved. This is a batch script and will extract the intensity from all images in a given folder. The user will need to run this file for each channel.
      * Suggested structure for saving results (this will be necessary for easily procesing the intensity data for further analysis):
-     * ~/results/
-           |–––– CFP_results
-           |–––– GFP_results
-           |–––– Cy5_results
+     * ~/results/<br>
+&emsp;&emsp;|–––– CFP_results<br>
+&emsp;&emsp;|–––– GFP_results<br>
+&emsp;&emsp;|–––– Cy5_results<br>
 8. **Apply Softmax and Generate ROI-level Channel Assignment Probabilities**
 ---
 ### Training and Fine-Tuning a Cellpose Model <a name="cellpose"></a>
