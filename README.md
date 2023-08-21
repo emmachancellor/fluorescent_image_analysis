@@ -12,7 +12,13 @@ or written with the intent of it becoming a package—it's not that pretty. <br>
 5. **Process ROI Masks for ImageJ Compatability**
      * **[ecd_roi_converter.py](https://github.com/emmachancellor/fluorescent_image_analysis/blob/main/ecd_roi_converter.py)**: This script performs two processing steps. First, the .txt ROIs saved from 512x512 .png images in Cellpose will be scaled to the original .TIF file size so that they can be overlayed on the original images. Second, the newly scaled .txt ROIs will be saved as a .zip file that can be opened natively in ImageJ. 
 6. **Extract Intensity from Each Channel**
-7. **Apply Softmax and Generate ROI-level Channel Assignment Probabilities**
+     * **[calculate_image_intensity.ijm](https://github.com/emmachancellor/fluorescent_image_analysis/tree/main)**: This is an ImageJ Macro file, which can be run directly from ImageJ. This script will prompt the user to select the location of the .zip masks, as well as where the intensity data should be saved. This is a batch script and will extract the intensity from all images in a given folder. The user will need to run this file for each channel.
+     * Suggested structure for saving results (this will be necessary for easily procesing the intensity data for further analysis):
+     * ~/results/
+           |–––– CFP_results
+           |–––– GFP_results
+           |–––– Cy5_results
+8. **Apply Softmax and Generate ROI-level Channel Assignment Probabilities**
 ---
 ### Training and Fine-Tuning a Cellpose Model <a name="cellpose"></a>
 All Cellpose documentation can be found in the original repository: https://github.com/mouseland/cellpose <br>
