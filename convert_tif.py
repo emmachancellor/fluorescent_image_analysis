@@ -36,7 +36,7 @@ for i, f in enumerate(files):
         new_size = (int(width * scale_factor), int(height * scale_factor))
 
         # Resize the image to the calculated size
-        im = im.resize(new_size, Image.ANTIALIAS)
+        im = im.resize(new_size, Image.LANCZOS)
 
         # Rename file
         file_name = str(f).rstrip(".TIF")
